@@ -1,0 +1,15 @@
+================================================================================
+TALLER ANALÍTICO 1: OPERACIONES CON TENSORES
+================================================================================
+1.  las dimensiones de recorte son (100,100)
+
+Filas(Alto):100:200 --> 200 - 100 = 100 pixeles
+columnas(Ancho):300:400 --> 400 - 300 = 100 pixeles
+
+2. 
+Eficiencia computacional del Slicing vs. Ciclos for
+Operaciones vectorizadas a nivel de C (NumPy C-API):
+El slicing de NumPy no ejecuta el bucle en Python puro. 
+Delega la operación a código precompilado en C/Fortran, 
+el cual utiliza instrucciones SIMD (Single Instruction, Multiple Data) 
+del procesador para manipular arreglos completos en paralelo a nivel de hardware.

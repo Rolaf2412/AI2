@@ -1,0 +1,27 @@
+================================================================================
+TALLER ANALÍTICO 1: INDEXACIÓN Y TENSORES
+================================================================================
+
+1. En la Matriz A de arriba, ¿cuál es el valor exacto del elemento A_(2,3) (Asumiendo índice base 0 para i y j)? Justifique qué representa visualmente.
+
+   RESPUESTA:
+   - Valor exacto: 0
+   - Ubicación e Indexación (base 0): En la fila con índice 2 (tercera fila) y columna con índice 3 (cuarta columna):
+     * Fila 0: [0, 255, 255, 255, 0]
+     * Fila 1: [255, 0, 0, 0, 255]
+     * Fila 2: [255, 0, 128, 0, 255] --> El elemento en j=3 es 0.
+   - Justificación visual: Representa un píxel completamente negro en escala de grises (0 = negro, 255 = blanco, 128 = gris medio). En la representación visual, corresponde al borde oscuro interno que rodea el píxel central gris.
+
+
+2. Si tenemos un Tensor RGB de dimensiones 1080 x 1920 x 3, ¿cuántos valores individuales (bytes) se están almacenando en memoria para esa única imagen sin comprimir? Realice el cálculo.
+
+   CÁLCULO:
+   - Píxeles totales = 1080 * 1920 = 2,073,600 píxeles
+   - Total de valores de intensidad (Canales R, G, B) = 1080 * 1920 * 3
+   - Total = 6,220,800 valores / bytes (asumiendo formato estándar uint8 de 1 byte por canal).
+
+   RESPUESTA:
+   Se almacenan exactamente 6,220,800 bytes (~6.22 MB).
+
+
+================================================================================

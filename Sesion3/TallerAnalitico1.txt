@@ -1,0 +1,74 @@
+```python
+content = """TALLER ANALÍTICO 1: FUNCIÓN ESCALÓN
+
+Dada la matriz I (3x3):
+[  80  120  140 ]
+[  90  200  210 ]
+[  50  130  250 ]
+
+1. Matriz resultante con umbral T = 135 (Umbralización binaria):
+
+   Regla: Si I(x, y) > 135 -> 255; de lo contrario -> 0
+
+   Matriz Resultante:
+   [   0    0  255 ]
+   [   0  255  255 ]
+   [   0    0  255 ]
+
+
+2. Análisis del error y efecto visual:
+
+   - Error cometido:
+     Al utilizar un umbral T = 135 en lugar de T = 100, los píxeles con valores de intensidad 120 y 130 fueron descartados (asignados a 0/fondo). Esto representa un error de sub-segmentación (falsos negativos), donde parte del objeto de interés no fue reconocida.
+
+   - Efecto visual en la imagen segmentada:
+     El objeto segmentado parecerá más reducido o recortado respecto a su tamaño real. Además, la pérdida de los píxeles de valor 120 y 130 generará agujeros, fisuras o pérdida de continuidad en la silueta y bordes de la figura binarizada.
+"""
+
+file_path = "solucion_taller_analitico_1.txt"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(content)
+
+print(f"File saved: {file_path}")
+
+
+```
+
+```text
+File saved: solucion_taller_analitico_1.txt
+
+
+```
+
+Your TXT file is ready
+
+
+Aquí tienes el contenido guardado en el archivo de texto:
+
+```text
+TALLER ANALÍTICO 1: FUNCIÓN ESCALÓN
+
+Dada la matriz I (3x3):
+[  80  120  140 ]
+[  90  200  210 ]
+[  50  130  250 ]
+
+1. Matriz resultante con umbral T = 135 (Umbralización binaria):
+
+   Regla: Si I(x, y) > 135 -> 255; de lo contrario -> 0
+
+   Matriz Resultante:
+   [   0    0  255 ]
+   [   0  255  255 ]
+   [   0    0  255 ]
+
+
+2. Análisis del error y efecto visual:
+
+   - Error cometido:
+     Al utilizar un umbral T = 135 en lugar de T = 100, los píxeles con valores de intensidad 120 y 130 fueron descartados (asignados a 0/fondo). Esto representa un error de sub-segmentación (falsos negativos), donde parte del objeto de interés no fue reconocida.
+
+   - Efecto visual en la imagen segmentada:
+     El objeto segmentado parecerá más reducido o recortado respecto a su tamaño real. Además, la pérdida de los píxeles de valor 120 y 130 generará agujeros, fisuras o pérdida de continuidad en la silueta y bordes de la figura binarizada.
+
+```

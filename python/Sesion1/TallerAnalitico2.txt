@@ -1,0 +1,21 @@
+================================================================================
+TALLER ANALÍTICO 2: TRANSFORMACIONES
+================================================================================
+
+1. Si transponemos una matriz identidad I de 4x4, ¿cuál es la matriz resultante? Explique geométricamente por qué.
+
+   RESPUESTA:
+   - Matriz resultante: La misma matriz identidad I de 4x4.
+   - Explicación geométrica: La matriz identidad es una matriz simétrica (I = I^T). La operación de transposición refleja los elementos a lo largo de la diagonal principal. Como todos los elementos en la diagonal son 1s y todos los demás elementos fuera de la diagonal son 0s, reflejarlos no altera la posición ni los valores de la matriz.
+
+
+2. Una imagen RGB tiene una forma de (200, 200, 3). Si la "aplanamos" para introducirla en la capa de entrada de una Red Neuronal, ¿cuántas neuronas exactas deberá tener esa capa de entrada para recibir el vector?
+
+   CÁLCULO:
+   - Dimensión total del vector aplanado = 200 * 200 * 3 = 120,000
+
+   RESPUESTA:
+   La capa de entrada deberá tener exactamente 120,000 neuronas (unidades de entrada).
+
+
+================================================================================
