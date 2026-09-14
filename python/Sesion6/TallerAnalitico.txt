@@ -1,0 +1,31 @@
+====================================================================
+TALLER ANALÍTICO: BOUNDING BOX
+====================================================================
+
+Dadas las coordenadas del objeto irregular:
+  A(2, 4), B(8, 2), C(10, 7), D(3, 9)
+
+1. COORDENADAS EXTREMAS (X_min, Y_min, X_max, Y_max)
+
+  Valores en X: [2, 8, 10, 3]
+    - X_min = 2
+    - X_max = 10
+
+  Valores en Y: [4, 2, 7, 9]
+    - Y_min = 2
+    - Y_max = 9
+
+  Coordenadas extremas:
+    (X_min, Y_min, X_max, Y_max) = (2, 2, 10, 9)
+
+--------------------------------------------------------------------
+2. CÁLCULO DEL ANCHO (W) Y ALTO (H) DEL BOUNDING BOX
+
+  Fórmulas:
+    Ancho (W) = X_max - X_min
+    Alto  (H) = Y_max - Y_min
+
+  Cálculo:
+    Ancho (W) = 10 - 2 = 8
+    Alto  (H) = 9 - 2 = 7
+====================================================================

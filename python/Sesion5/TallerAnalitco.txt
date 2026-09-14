@@ -1,0 +1,47 @@
+====================================================================
+TALLER ANALÍTICO: CALCULANDO EL GRADIENTE
+====================================================================
+
+Dada la matriz de imagen I (3x3):
+  [   0   0  255 ]
+  [   0   0  255 ]
+  [   0   0  255 ]
+
+1. CÁLCULO DE LA CONVOLUCIÓN CON SOBEL X (Gx)
+
+Kernel Sobel X (Gx):
+  [ -1   0   1 ]
+  [ -2   0   2 ]
+  [ -1   0   1 ]
+
+Multiplicación elemento a elemento y sumatoria:
+  Gx = (0)*(-1) + (0)*(0) + (255)*(1)
+     + (0)*(-2) + (0)*(0) + (255)*(2)
+     + (0)*(-1) + (0)*(0) + (255)*(1)
+
+  Gx = 255 + 510 + 255 = 1020
+
+Respuesta 1: El valor del gradiente en X es 1020.
+
+
+2. CÁLCULO DE LA CONVOLUCIÓN CON SOBEL Y (Gy) Y ANÁLISIS
+
+Kernel Sobel Y (Gy):
+  [ -1  -2  -1 ]
+  [  0   0   0 ]
+  [  1   2   1 ]
+
+Multiplicación elemento a elemento y sumatoria:
+  Gy = (0)*(-1) + (0)*(-2) + (255)*(-1)
+     + (0)*(0)  + (0)*(0)  + (255)*(0)
+     + (0)*(1)  + (0)*(2)  + (255)*(1)
+
+  Gy = -255 + 0 + 255 = 0
+
+Respuesta 2:
+- ¿Por qué el resultado es cero?
+  Porque los valores de los píxeles no cambian en la dirección vertical (las filas son idénticas de arriba a abajo). Las variaciones positivas de la fila inferior cancelan exactamente las variaciones negativas de la fila superior.
+
+- ¿Qué indica esto sobre la dirección del borde?
+  Indica que NO existe variación de intensidad en el eje vertical (Y), confirmando que el borde presente es un borde puramente VERTICAL.
+====================================================================

@@ -1,0 +1,44 @@
+====================================================================
+TALLER ANALÍTICO: CALCULANDO LA CONVOLUCIÓN 2D
+====================================================================
+
+1. CÁLCULO MATEMÁTICO DEL NUEVO VALOR DEL PÍXEL CENTRAL
+
+Matriz de la Imagen (I):
+  [ 10   20   30 ]
+  [ 15  250   15 ]
+  [ 20   10   20 ]
+
+Kernel de Media (K) - Tamaño 3x3:
+  [ 1/9  1/9  1/9 ]
+  [ 1/9  1/9  1/9 ]
+  [ 1/9  1/9  1/9 ]
+
+Fórmula de Convolución (Producto Punto elemento a elemento y Sumatoria):
+  Nuevo Valor = Suma( I[i,j] * K[i,j] )
+              = (1/9) * Suma( I[i,j] )
+
+Paso a paso:
+  Suma de todos los píxeles = 10 + 20 + 30 + 15 + 250 + 15 + 20 + 10 + 20
+                            = 390
+
+  Nuevo Valor = 390 / 9
+              = 43.333... (Aproximadamente 43.33)
+
+--------------------------------------------------------------------
+2. ANÁLISIS: RUIDO DE SAL Y EFECTO DE DIFUMINADO / SUAVIZADO
+
+* ¿Por qué el valor original era 250?
+  El valor 250 representa un "ruido de sal" (anomalía de intensidad muy alta 
+  o píxel blanco aislado en una región de tono oscuro cercano a 15-20).
+
+* ¿Por qué se dice que el filtro de media difumina o suaviza la imagen?
+  - Reducción del pico: El valor del píxel central cae drásticamente de 250 a 43.33.
+  - Distribución del error: El filtro de media asume que todos los píxeles 
+    vecinos tienen el mismo peso (1/9). Por lo tanto, el valor extremo (250) 
+    no se elimina por completo, sino que su "energía" se promedia entre 
+    sus vecinos.
+  - Efecto visual: Esto suaviza el pico abrupto, convirtiendo un píxel blanco 
+    brillante aislado en un parche grisáceo difuso (un borrón). 
+    Al suavizar los contrastes fuertes y bordes, la imagen pierde nitidez general.
+====================================================================
